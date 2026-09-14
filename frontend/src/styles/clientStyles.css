@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+.username{
+    color:white;
+    font-family: "DM Mono", monospace;
+    width: max-content;
+    text-align: center;
+    padding: 5px 10px;
+
+    
+    
+}
+.client
+{
+    
+border-bottom: 1px solid white ;
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+.editorDiv
+{
+    color: white;
+    width: auto;
+    /* background: black; */
+    
+}
+
+.mainWrap
+{
+    display: flex;
+    height: 100vh;
+    width: auto;
+    background: black;
+}
+
+.editorInner
+{
+    width: 100vb;
+}
+
+.nameHeading
+{
+    color: #8c52ff;
+    font-weight: bold;
+    font-family: "DM Mono", monospace;
+}
+
+.editorLogo
+{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+.aside
+{
+    background: rgb(30, 30, 30);
+    width: 10rem;
+}
+
+.editorButtons{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    width: auto;
+}
+
+.copyRoomIdBtn
+{    
+    margin: 10px;
+  border-radius: 4px;
+  color: white;
+  background: #8c52ff;
+  border-style: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "DM Mono", monospace;
+}
+
+.copyRoomIdBtn:hover
+{
+    background-color: white;
+    color: #8c52ff;
+}
+
+.leaveRoom
+{
+        margin: 10px;
+  border-radius: 4px;
+  color: white;
+  background: rgb(255, 73, 73);
+  border-style: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "DM Mono", monospace;
+}
+
+.leaveRoom:hover
+{
+    background-color: white;
+    color: rgb(255, 73, 73);
+}
+.clientsList
+{
+    width: auto;
+}
