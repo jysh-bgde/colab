@@ -4,17 +4,16 @@ import "../styles/editorStyles.css";
 import { useLocation, useNavigate } from "react-router";
 import { initSocket } from "../socket.js";
 import ACTIONS from "../actions.js";
-import "../styles/editorStyles.css";
 import Client from "./Client.jsx";
-import { applyRemoteCode, createEditorView } from "../utilities/editorView.js";
-import updateListenerFunction from "../utilities/editorView.js";
+import { applyRemoteCode, createEditorView, default as updateListenerFunction } from "../utilities/editorView.js";
+
 import { ToastContainer, toast} from "react-toastify";
 
 const Editor = () => {
   const socketRef = useRef(null);
   const navigate = useNavigate();
   const editorRef = useRef(null);
-  const codeRef = useRef('console.log("hello")');
+  const codeRef = useRef('');
 
   const parentRef = useRef(null);
   const viewRef = useRef(null);
@@ -92,6 +91,7 @@ const Editor = () => {
       );
       socketRef.current.on(ACTIONS.CODE_CHANGE, ({ code }) => {
         applyRemoteCode(editorRef.current, code);
+        codeRef.current = code;   
       });
 
       socketRef.current.on(ACTIONS.SYNC_CODE, ({ code }) => {

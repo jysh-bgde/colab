@@ -7,6 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 const userSocketMap = {};
+const roomCodeMap = {};    
 
 function getAllConnectedClients(roomId) {
   return Array.from(io.sockets.adapter.rooms.get(roomId) || []).map(
@@ -33,9 +34,14 @@ io.on("connection", (socket) => {
         socketId: socket.id,
       });
     });
+     if(roomCodeMap[roomId] !== undefined)
+  {
+    io.to(socket.id).emit(ACTIONS.CODE_CHANGE, {code: userSocketMap[roomId] });
+  }
   });
-
+ 
   socket.on(ACTIONS.CODE_CHANGE, ({ roomId, code }) => {
+    roomCodeMap[roomId] = code;
     socket.in(roomId).emit(ACTIONS.CODE_CHANGE, { code });
   });
 
