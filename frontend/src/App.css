@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 .mainDiv{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #8c52ff;
+  background: oklch(0.99 0 0);
 }
 
 .name
-{ color: white;
-  font-family: "DM Mono", monospace;
+{ color: lab(0% 0 0);
+  font-family: "Geist Mono", monospace;
   word-spacing: 3px;
 }
 
@@ -19,6 +19,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  width: 100%;
 }
 
 .formDiv
@@ -30,40 +31,45 @@
   padding: 50px;
   border-radius: 10px;
   /* border: 2px solid white; */
-  background-color: #6c3ad0;
+  background-color: oklch(0.95 0 0);
+  box-shadow: 0 1px 3px 0 #0000001a;
+  justify-content: center;
 
 }
 
 .roomInput
 {
   margin: 10px 0px;
-  padding: 9px 10px;
+  padding: 9px 13px;
   border-radius: 10px;
   border-style: none;
+  width: 90%
   
 }
 
 .usernameInput
 {
   margin: 10px 0px;
-  padding: 9px 10px;
+  padding: 9px 13px;
   border-radius: 10px;
   border-style: none;
+  width: 90%;
 }
 
 .joinBtn
-{ margin: 10px;
-  padding: 3px;
+{ 
+  margin: 6px 0px;
+  /* padding: 3px; */
   border-radius: 7px;
-  color: white;
-    background: #9865ff;
+  color: lab(98.26% 0 0);
+    background: lab(0% 0 0) ;
 
   border-style: none;
-  padding: 5px 10px;
+  padding: 5px 3px;
   cursor: pointer;
   text-decoration: none;
- width: stretch;
- font-family: "DM Mono", monospace;
+  width: 100%;
+ font-family: "Geist Mono", monospace;
  font-weight: bold;
   
   
@@ -71,21 +77,65 @@
 
 .joinBtn:hover
 {
-  background: white;
-  color: #9865ff ;
+  background: lab(98.26% 0 0);
+  color: lab(0% 0 0) ;
   /* border: 1px solid whitesmoke; */
 
 }
 
-.logo
-{
-  height: 100px;
-  width: 100px;
-}
+
 
 input:focus
 { 
  
 
   outline: none;
+}
+
+
+.generateRoomIdButton
+{ margin: 7px 4px;
+  /* padding: 3px; */
+  border-radius: 7px;
+ 
+
+  border-style: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  font-family: "Geist Mono", monospace;
+  font-weight: bold;
+  color: lab(0% 0 0);
+  background-color: white;
+}
+
+.buttonsdiv
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.copyRoomIdButton
+{
+  margin: 7px 4px;
+  /* padding: 3px; */
+  border-radius: 7px;
+ 
+
+  border-style: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  font-family: "Geist Mono", monospace;
+  font-weight: bold;
+  color: lab(0% 0 0);
+  background-color: white;
+}
+
+.generateRoomIdButton:hover, .copyRoomIdButton:hover
+{
+  background-color:  oklch(0.92 0 0);
+  color: lab(0% 0 0);
 }

@@ -178,7 +178,7 @@ const Editor = () => {
           <div className="asideInner">
             <div className="logo">
               
-               <div className="brandName"><h1 className="nameHeading">COLAB</h1></div>
+               <div className="brandName"><h1 className="nameHeading">Colab</h1></div>
             </div>
             <div className="clientsList">
               {clients.map((client, index) => (
@@ -189,6 +189,7 @@ const Editor = () => {
                 />
               ))}
             </div>
+          </div>
             <div className="editorButtons">
               <button className="copyRoomIdBtn" onClick={copyRoomId}>
                 Copy Room ID
@@ -197,7 +198,6 @@ const Editor = () => {
                 Leave
               </button>
             </div>
-          </div>
         </div>
         <div className="editorDiv">
           <div ref={parentRef} className="editorInner"></div>

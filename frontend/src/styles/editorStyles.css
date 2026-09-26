@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
 .editorDiv
 {
     color: white;
     width: auto;
     /* background: black; */
+    background-color: lab(2.75381% 0 0);
     
 }
 
@@ -12,22 +13,36 @@
 {
     display: flex;
     height: 100vh;
-    width: auto;
+    width: 100%;
     background: black;
 }
 
 .editorInner
 {
-    width: 100vb;
+    width: 85vw;
 }
 
+.aside
+{
+    background: lab(15.204% 0 -.00000596046);
+    width: 15vw;
+    position: relative;
+}
 .nameHeading
 {
-    color: #8c52ff;
+    color: oklch(0.99 0 0);
     font-weight: bold;
-    font-family: "DM Mono", monospace;
+    font-family: "Geist Mono", monospace;
+    text-align: center;
 }
-
+.logo
+{
+    border-bottom: oklch(0.99 0 0) solid 2px;
+    width: 100%;
+    padding: 10px 0px;
+     
+    
+}
 .editorLogo
 {
     height: 30px;
@@ -36,61 +51,59 @@
 
 
 
-.aside
-{
-    background: rgb(30, 30, 30);
-    width: 10rem;
-}
 
 .editorButtons{
-    position: absolute;
-    bottom: 20px;
+  position: absolute;  
+    bottom: 1rem;
     display: flex;
     flex-direction: column;
     
-    width: auto;
+    width: 100%;
 }
 
 .copyRoomIdBtn
 {    
     margin: 10px;
   border-radius: 4px;
-  color: white;
-  background: #8c52ff;
+  color: lab(98.26% 0 0);
+  background: lab(0% 0 0);
   border-style: none;
   padding: 5px 10px;
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  font-family: "DM Mono", monospace;
+  font-family: "Geist Mono", monospace;
 }
 
 .copyRoomIdBtn:hover
 {
-    background-color: white;
-    color: #8c52ff;
+    background-color: lab(7.78201% -.0000149012 0);
+    
 }
 
 .leaveRoom
 {
         margin: 10px;
   border-radius: 4px;
-  color: white;
-  background: rgb(255, 73, 73);
+  color: lab(0% 0 0) ;
+  background: lab(98.26% 0 0);
   border-style: none;
   padding: 5px 10px;
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  font-family: "DM Mono", monospace;
+  font-family: "Geist Mono", monospace;
 }
 
 .leaveRoom:hover
 {
-    background-color: white;
-    color: rgb(255, 73, 73);
+    background-color: lab(90.26% 0 0);
+    
 }
 .clientsList
 {
-    width: auto;
+    width: 100%;
+    overflow: auto;
+    margin-top: 2rem;
+
 }

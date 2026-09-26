@@ -3,6 +3,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "./App.css";
 import "./index.css";
 import { useNavigate } from "react-router";
+import { v4 as uuidv4 } from 'uuid';
+
 
 function App() {
   const [username, setUsername] = useState("");
@@ -12,6 +14,50 @@ function App() {
 
   function handleRoomIdChange(e) {
     setRoomId(e.target.value);
+  }
+
+  function handleGenerateRoomID(e)
+  {
+    e.preventDefault();
+    const id = uuidv4()
+    setRoomId(id)
+    
+  }
+
+   function handleCopyRoomID(e)
+  {
+    e.preventDefault();
+    if(roomId)
+    {
+       navigator.clipboard.writeText(roomId)
+       
+      toast.success("Room ID copied", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+    }
+    else
+    {
+      toast.error("Room ID cannot be empty", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+    }
+    
   }
 
   function handleUsernameChange(e) {
@@ -47,7 +93,7 @@ function App() {
       <div className="mainDiv">
         <div className="formDiv">
           <div className="brandName">
-            <h1 className="name">COLAB</h1>
+            <h1 className="name">Colab</h1>
           </div>
           <form className="inputDiv" onSubmit={handleJoinClick}>
             <span className="font">Room Id</span>
@@ -71,6 +117,15 @@ function App() {
             <button className="joinBtn" type="submit">
               Join
             </button>
+            <div className="buttonsdiv">
+
+            <button className="generateRoomIdButton" onClick={handleGenerateRoomID}>
+              Create Room ID
+            </button>
+            <button className="copyRoomIdButton" onClick={handleCopyRoomID}>
+              Copy Room ID
+            </button>
+            </div>
           </form>
         </div>
       </div>
